@@ -3,14 +3,14 @@ project:
   output-dir: docs
 
 website:
-  title: "quartoCourseBlog"
+  title: "Damian Marciniak's R Portfolio"
   navbar:
     right:
       - about.qmd
       - icon: github
-        href: https://github.com/CrumpLab/quartoCourseBlog
-      - icon: twitter
-        href: https://twitter.com/MattCrumpLab
+        href: https://github.com/DamianMarciniak2005/rcc_quarto
+      - icon: linkedin
+        href: https://www.linkedin.com/in/damian-marciniak-0928a5214 
 format:
   html:
     theme: minty

@@ -121,8 +121,15 @@
   {
     "objectID": "about.html",
     "href": "about.html",
-    "title": "About",
+    "title": "About Me",
     "section": "",
-    "text": "The content on this page is from about.qmd. Edit that file to change how this page looks.\n“About” pages are special quarto template pages, with multiple options: https://quarto.org/docs/websites/website-about.html.\nTry changing the template type from jolla to one of the other options for a different look and feel."
+    "text": "The content on this page is from about.qmd. Edit that file to change how this page looks.\n“About” pages are special quarto template pages, with multiple options: https://quarto.org/docs/websites/website-about.html.\nTry changing the template type from jolla to one of the other options for a different look and feel.\nGoogle used to be great.\n2+2\n\n[1] 4\n\ninstall.packages(\"ggplot2\")\n\nInstalling package into '/cloud/lib/x86_64-pc-linux-gnu-library/4.5'\n(as 'lib' is unspecified)\n\ninstall.packages(\"tidyverse\")\n\nInstalling package into '/cloud/lib/x86_64-pc-linux-gnu-library/4.5'\n(as 'lib' is unspecified)\n\nlibrary(ggplot2)\nggplot(mpg, aes(x = hwy, y = cyl)) + geom_point()"
+  },
+  {
+    "objectID": "about.html#methods",
+    "href": "about.html#methods",
+    "title": "About Me",
+    "section": "Methods",
+    "text": "Methods\n\nData Source\n\n\nPackages Used"
   }
 ]
