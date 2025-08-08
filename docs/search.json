@@ -86,50 +86,29 @@
   {
     "objectID": "index.html",
     "href": "index.html",
-    "title": "quartoCourseBlog",
+    "title": "Damian Marciniak’s R Project on Microsoft Stocks 2024-25",
     "section": "",
-    "text": "This is me\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nExample assignment\n\n\n\ngoals\n\ngeneral\n\n\n\n\n\n\n\n\n\nOct 21, 2022\n\n\nMatt Crump\n\n\n\n\n\n\n\n\n\n\n\n\nMy First post\n\n\n\ngoals\n\ngeneral\n\n\n\n\n\n\n\n\n\nOct 21, 2022\n\n\nMatt Crump\n\n\n\n\n\nNo matching items"
+    "text": "Welcome to my website showing off my R Portfolio!\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nMy R Project\n\n\n\n\n\n\n\n\nAug 6, 2025\n\n\nDamian Marciniak\n\n\n\n\n\nNo matching items"
   },
   {
-    "objectID": "posts/Example_assignment/index.html",
-    "href": "posts/Example_assignment/index.html",
-    "title": "Example assignment",
+    "objectID": "posts/my_first_post/indexPost.html",
+    "href": "posts/my_first_post/indexPost.html",
+    "title": "My R Project",
     "section": "",
-    "text": "This assignment engages you in the process of introspection. Your task is to use introspection to evaluate and describe your own mental imagery abilities. Attempt to answer the following kinds of questions. What is your mental imagery like? Do you have mental imagery for different kinds of senses? Is your mental imagery vivid and life-like or very different from normal perception? How would you describe your mental imagery?\nYou should write a minimum of 250 words, but feel free to write more. Submit your document on blackboard by the due date."
-  },
-  {
-    "objectID": "posts/Example_assignment/index.html#my-mental-imagery",
-    "href": "posts/Example_assignment/index.html#my-mental-imagery",
-    "title": "Example assignment",
-    "section": "My mental imagery",
-    "text": "My mental imagery\nMy mental imagery is like…"
-  },
-  {
-    "objectID": "posts/my_first_post/index.html",
-    "href": "posts/my_first_post/index.html",
-    "title": "My First post",
-    "section": "",
-    "text": "This is an example first post. Whatever you write here will appear inside your post.\nIt is possible to write lists:\nAnd make headers"
-  },
-  {
-    "objectID": "posts/my_first_post/index.html#this-is-a-second-level-heading",
-    "href": "posts/my_first_post/index.html#this-is-a-second-level-heading",
-    "title": "My First post",
-    "section": "This is a second level heading",
-    "text": "This is a second level heading\nYou can include images, and many other kinds of content.\nIf you are using the visual editor in Rstudio you can drag images onto the editor to insert them into the document. Otherwise, you need to place the image inside of the folder for this post, and then you can insert it to your post directly, like this:\n\nThe first image in a blog post will also be used on the listings page."
+    "text": "This project uses a dataset regarding Microsoft Stock from August 4th 2024 to August 4th 2025. For more information, you may click on my About Me in the top right corner."
   },
   {
     "objectID": "about.html",
     "href": "about.html",
-    "title": "About Me",
+    "title": "R Project on Microsoft Stock from 2024-2025",
     "section": "",
-    "text": "The content on this page is from about.qmd. Edit that file to change how this page looks.\n“About” pages are special quarto template pages, with multiple options: https://quarto.org/docs/websites/website-about.html.\nTry changing the template type from jolla to one of the other options for a different look and feel.\nGoogle used to be great.\n2+2\n\n[1] 4\n\ninstall.packages(\"ggplot2\")\n\nInstalling package into '/cloud/lib/x86_64-pc-linux-gnu-library/4.5'\n(as 'lib' is unspecified)\n\ninstall.packages(\"tidyverse\")\n\nInstalling package into '/cloud/lib/x86_64-pc-linux-gnu-library/4.5'\n(as 'lib' is unspecified)\n\nlibrary(ggplot2)\nggplot(mpg, aes(x = hwy, y = cyl)) + geom_point()"
+    "text": "Important questions to ask\n\nDoes high volume correlate with large price movements?\nIs there a relationship between the date and and closing price?\n\nWhy is this important?\n\nVolume indicates stock activity and price movement indicates volatility, which allows us to analyze how “reactive” a stock is to buying/selling pressure\nDate and closing time indicates whether Microsoft’s stocks are going in an upward or downward trend, which is an indicator of how well the company is financially operating\n\nPredictions\n\nHigher trading volume will moderately correlate with larger price movements, meaning higher volume leads to more range\nI predict that there is some kind of relationship between date and closing price, especially over the 2024–25 period, of which I expect Microsoft’s stock to show a subtle to moderate upward trend over time\n\nThe following data source was used for this project:\nMicrosoft Stocks 1 Year Historical Data\nhttps://www.kaggle.com/datasets/imaadmahmood/microsoft-stocks-1-year-historical-data"
   },
   {
-    "objectID": "about.html#methods",
-    "href": "about.html#methods",
-    "title": "About Me",
-    "section": "Methods",
-    "text": "Methods\n\nData Source\n\n\nPackages Used"
+    "objectID": "about.html#code",
+    "href": "about.html#code",
+    "title": "R Project on Microsoft Stock from 2024-2025",
+    "section": "Code",
+    "text": "Code\n\ninstall.packages(\"ggplot2\")\n\nInstalling package into '/cloud/lib/x86_64-pc-linux-gnu-library/4.5'\n(as 'lib' is unspecified)\n\nlibrary(tidyverse)\n\n── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──\n✔ dplyr     1.1.4     ✔ readr     2.1.5\n✔ forcats   1.0.0     ✔ stringr   1.5.1\n✔ ggplot2   3.5.2     ✔ tibble    3.3.0\n✔ lubridate 1.9.4     ✔ tidyr     1.3.1\n✔ purrr     1.1.0     \n\n\n── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──\n✖ dplyr::filter() masks stats::filter()\n✖ dplyr::lag()    masks stats::lag()\nℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors\n\nlibrary(ggplot2)\nlibrary(dplyr)\n\nMicrosoftStockData &lt;- read.csv(\"Microsoft stocks 1 year data.csv\")\n\n# 1. Does high volume correlate with large price movements? ---------------\n\n# Calculate return stock and return a new dataset including the range\nMicrosoftStockDataWithRange &lt;- MicrosoftStockData |&gt;\n  mutate(\n    range = high - low\n  ) |&gt;\n  arrange(range)\n\n\n# Graph of Return Vs. Volume\nggplot(data = MicrosoftStockDataWithRange, mapping = aes(x = volume, y = range)) + \n  geom_point(position = \"jitter\", alpha = 0.5) + geom_smooth(color = \"yellow\") + labs(title = \"Range (in $) Vs. Volume (in shares) Graph\", color = \"black\") + theme(axis.title.x = element_text(colour = \"black\"), axis.title.y = element_text(colour = \"black\"))\n\n`geom_smooth()` using method = 'loess' and formula = 'y ~ x'\n\n\n\n\n\n\n\n\n# Returns the average range\nMicrosoftStockDataWithRange |&gt;\n  summarize(\n   averageRange = mean(range)\n)\n\n  averageRange\n1     7.616586\n\n\nBased on the graph provided, higher volume can lead to higher ranges, however this is not generally common as seen from the data. This means that as people bought more Microsoft shares, the more volatile those shares became. Additionally, the average range comes out to be $7.60, meaning that the average difference between the highest and lowest stocks from August 2024 to August 2025 is $7.60.\n\n# 2. Is there a relationship between the date and and closing price? --------\n\nggplot(data = MicrosoftStockDataWithRange, mapping = aes(x = date, y = close)) + \n  geom_point(position = \"jitter\", color = \"red\", alpha = 0.5) + labs(title = \"Closing Price (in $) Vs. Time (in Days)\", color = \"black\") + theme(axis.title.x = element_text(colour = \"black\"), axis.title.y = element_text(colour = \"black\"))\n\n\n\n\n\n\n\n# Return the minimum closing price\nMicrosoftStockDataWithRange |&gt; \n  select(close, volume, range, date) |&gt;\n  arrange(close) |&gt;\n  slice(1)\n\n   close   volume range       date\n1 354.56 35868918  23.4 2025-04-08\n\n# Returns the maximum closing price\nMicrosoftStockDataWithRange |&gt; \n  select(close, volume, range, date) |&gt;\n  arrange(desc(close)) |&gt;\n  slice(1)\n\n  close   volume range       date\n1 533.5 51617326 23.55 2025-07-31\n\n# Spring 2025 usually had the least costly closing price, while the end of the summer has the most costly closing price\n\nBased on the graph provided, Spring 2025 usually has the least costly closing price, while the end of Summer 2025 had the most costly closing price. Additionally, the graph showcases that from August 2024 to April 2025, Microsoft stock has been going on a downward trend with the lowest closing price occuring on April 8th 2025. On the other hand from May 2025 to August 2025, Microsoft stock has been going on an upward trend with the highest closing price occuring on July 31st 2025."
   }
 ]

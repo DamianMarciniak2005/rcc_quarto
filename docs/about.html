@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>About Me – quartoCourseBlog</title>
+<title>R Project on Microsoft Stock from 2024-2025 – Damian Marciniak’s R Portfolio</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -73,7 +73,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-0815c480559380816a4d1ea211a47e91.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-5a8e8b9f5724df115f1a51278af9f234.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-38fa85a8fa22643a022874af566011dd.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -114,7 +114,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
     <a class="navbar-brand" href="./index.html">
-    <span class="navbar-title">quartoCourseBlog</span>
+    <span class="navbar-title">Damian Marciniak’s R Portfolio</span>
     </a>
   </div>
             <div id="quarto-search" class="" title="Search"></div>
@@ -125,15 +125,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item">
     <a class="nav-link active" href="./about.html" aria-current="page"> 
-<span class="menu-text">About Me</span></a>
+<span class="menu-text">R Project on Microsoft Stock from 2024-2025</span></a>
   </li>  
   <li class="nav-item compact">
-    <a class="nav-link" href="https://github.com/CrumpLab/quartoCourseBlog"> <i class="bi bi-github" role="img">
+    <a class="nav-link" href="https://github.com/DamianMarciniak2005/rcc_quarto"> <i class="bi bi-github" role="img">
 </i> 
 <span class="menu-text"></span></a>
   </li>  
   <li class="nav-item compact">
-    <a class="nav-link" href="https://twitter.com/MattCrumpLab"> <i class="bi bi-twitter" role="img">
+    <a class="nav-link" href="https://www.linkedin.com/in/damian-marciniak-0928a5214"> <i class="bi bi-linkedin" role="img">
 </i> 
 <span class="menu-text"></span></a>
   </li>  
@@ -151,44 +151,169 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     
 <!-- main -->
 <div class="quarto-about-jolla">
-  <img src="profile.jpg" class="about-image
+  <img src="images/MicrosoftLogo.png" class="about-image
   round " style="height: 15em; width: 15em;">
  <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">About Me</h1>
+<h1 class="title">R Project on Microsoft Stock from 2024-2025</h1>
 </div>
 <div class="quarto-title-meta">
   </div>
 </header><main class="content" id="quarto-document-content">
-<p>The content on this page is from <code>about.qmd</code>. Edit that file to change how this page looks.</p>
-<p>“About” pages are special quarto template pages, with multiple options: <a href="https://quarto.org/docs/websites/website-about.html" class="uri">https://quarto.org/docs/websites/website-about.html</a>.</p>
-<p>Try changing the template type from <code>jolla</code> to one of the other options for a different look and feel.</p>
+<section id="introduction" class="level1">
+<h1>Introduction</h1>
 <ul>
-<li><p>This is a bullet point</p></li>
-<li><p>This is another</p>
-<ol type="1">
-<li>This is a numbered list</li>
-<li>This is part 2</li>
-</ol></li>
+<li><p><strong>Important questions to ask</strong></p>
+<ul>
+<li><p>Does high volume correlate with large price movements?</p></li>
+<li><p>Is there a relationship between the date and and closing price?</p></li>
+</ul></li>
+<li><p><strong>Why is this important?</strong></p>
+<ul>
+<li><p>Volume indicates stock activity and price movement indicates volatility, which allows us to analyze how “reactive” a stock is to buying/selling pressure</p></li>
+<li><p>Date and closing time indicates whether Microsoft’s stocks are going in an upward or downward trend, which is an indicator of how well the company is financially operating</p></li>
+</ul></li>
+<li><p><strong>Predictions</strong></p>
+<ul>
+<li><p>Higher trading volume will moderately correlate with larger price movements, meaning higher volume leads to more range</p></li>
+<li><p>I predict that there is some kind of relationship between date and closing price, especially over the 2024–25 period, of which I expect Microsoft’s stock to show a subtle to moderate upward trend over time</p></li>
+</ul></li>
+<li><p>The following data source was used for this project:</p>
+<p><strong>Microsoft Stocks 1 Year Historical Data</strong></p>
+<p><a href="https://www.kaggle.com/datasets/imaadmahmood/microsoft-stocks-1-year-historical-data" class="uri">https://www.kaggle.com/datasets/imaadmahmood/microsoft-stocks-1-year-historical-data</a></p></li>
 </ul>
-<p><a href="https://www.google.com/?safe=active&amp;ssui=on">Google</a> used to be great.</p>
+</section>
+<section id="approach" class="level1">
+<h1>Approach</h1>
+<section id="source" class="level3">
+<h3 data-anchor-id="source">Source:</h3>
+<p><strong>Microsoft Stocks 1 Year Historical Data</strong></p>
+<p><a href="https://www.kaggle.com/datasets/imaadmahmood/microsoft-stocks-1-year-historical-data" class="uri">https://www.kaggle.com/datasets/imaadmahmood/microsoft-stocks-1-year-historical-data</a></p>
+<ul>
+<li>The data source provided is historical one year of Microsoft Stock Data from August 2024 to August 2025</li>
+<li>data analysis will be conducted through utilizing the R programming language</li>
+</ul>
+</section>
+<section id="data-collection" class="level3">
+<h3 data-anchor-id="data-collection">Data Collection:</h3>
+<ul>
+<li><p>The data was collected by monitoring Microsoft Stock variables, and how they fluctuated throughout the year</p></li>
+<li><p>Each entry provided represents a single trading day and includes essential stock market data</p>
+<h3 id="variables">Variables</h3>
+<p><strong>-Date:</strong> The trading day in YYYY-MM-DD format.</p>
+<p>-<strong>Open:</strong> Stock price at market open.</p>
+<p><strong>-High:</strong> Highest stock price during the day.</p>
+<p><strong>-Low:</strong> Lowest stock price during the day.</p>
+<p><strong>-Close:</strong> Stock price at market close.</p>
+<p><strong>-Volume:</strong> Number of shares traded on that day.</p>
+<p><strong>-Price Movement (Range):</strong> The difference between the highest stock and lowest stock on a certain day,</p>
+<p>which is used to determine the volitility of the stock market on a certain day.</p></li>
+</ul>
+</section>
+<section id="recordsrows" class="level3">
+<h3 data-anchor-id="recordsrows">Records/Rows</h3>
+<ul>
+<li><p>The dataset contains 249 <strong>rows</strong></p></li>
+<li><p>Each row daily stock records with respect to the variables listed earlier</p></li>
+</ul>
+<section id="relevant-information" class="level4">
+<h4 data-anchor-id="relevant-information">Relevant Information</h4>
+<ul>
+<li><p>Date is represented in days</p></li>
+<li><p>Open, high, low, close, and range are represented in dollars($)</p></li>
+<li><p>Volume is represented in shares</p></li>
+</ul>
+</section>
+</section>
+<section id="tools-packages-used" class="level3">
+<h3 data-anchor-id="tools-packages-used">Tools &amp; Packages Used</h3>
+<ul>
+<li><p>R/Rstudio in <a href="https://posit.cloud/">posit.cloud</a></p></li>
+<li><p>GitHub REPO being hosted: <a href="https://github.com/DamianMarciniak2005/rcc_quarto" class="uri">https://github.com/DamianMarciniak2005/rcc_quarto</a></p></li>
+<li><p>install.packages(“ggplot2”) [R Package]</p></li>
+<li><p>library(tidyverse) [R Library]</p></li>
+<li><p>library(ggplot2) [R Library]</p></li>
+<li><p>library(dplyr) [R Library]</p></li>
+</ul>
+</section>
+<section id="approach-cont." class="level3">
+<h3 data-anchor-id="approach-cont.">Approach cont.</h3>
+<ul>
+<li><p>I will examine I will examine the correlation between <strong>daily trading volume</strong> and the <strong>range</strong> for Microsoft stock.</p></li>
+<li><p>Compute the <strong>range</strong> for each day:</p>
+<p><strong>range</strong> = high - low</p>
+<p>Create a <strong>scatter plot</strong> with:</p>
+<p><strong>volume</strong> on the x-axis</p>
+<p><strong>range</strong> on the y-axis</p></li>
+<li><p>Use geom_line() to visualize trends over time.</p></li>
+<li><p>Use geom_smooth() to create a smooth line through the data</p></li>
+<li><p>Use labs() to add a title and color</p></li>
+<li><p>Use theme() to add colors to labels</p></li>
+<li><p>Use a summarize() to return the average range</p></li>
+<li><p>I will analyze the relationship between the <strong>date</strong> and <strong>closing price</strong> of Microsoft stock from 2024 to 2025.</p></li>
+<li><p>Create a <strong>scatter plot</strong> with:</p>
+<p><strong>date</strong> on the x-axis</p>
+<p><strong>closing price</strong> on the y-axis</p></li>
+<li><p>Use geom_line() to visualize trends over time.</p></li>
+<li><p>Use geom_smooth() to create a smooth line through the data</p></li>
+<li><p>Use labs() to add a title and color</p></li>
+<li><p>Use theme() to add colors to labels</p></li>
+<li><p>Use an R data pipeline to return a row with the maximum closing price</p></li>
+<li><p>Use an R data pipeline to return a row with the minimum closing price</p></li>
+</ul>
+</section>
+<section id="predictions-cont." class="level3">
+<h3 data-anchor-id="predictions-cont.">Predictions cont.</h3>
+<p>I predict that higher daily trading volume will be linear and positively correlated with larger absolute price movements. Specifically, I expect that days with high trading volume in will yield a high average range greater than most ranges throughout the year. This would mean that that high volume days tend to accompany stronger market reactions or volatility.</p>
+<p>I predict that there will be a moderate linear relationship between the date and closing price of Microsoft stock over the 2024–2025 period. Specifically, I expect the closing price to increase dramatically at some time frame in year and decrease in a different time frame in said year (assuming a relatively stable market and no major downturns). This would realistically reflect how the stock market actually operates.</p>
+</section>
+</section>
+<section id="results" class="level1">
+<h1>Results</h1>
+<section id="code" class="level2">
+<h2 data-anchor-id="code">Code</h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="dv">2</span><span class="sc">+</span><span class="dv">2</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] 4</code></pre>
-</div>
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">"ggplot2"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">"ggplot2"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stderr">
 <pre><code>Installing package into '/cloud/lib/x86_64-pc-linux-gnu-library/4.5'
 (as 'lib' is unspecified)</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">"tidyverse"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stderr">
-<pre><code>Installing package into '/cloud/lib/x86_64-pc-linux-gnu-library/4.5'
-(as 'lib' is unspecified)</code></pre>
+<pre><code>── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──
+✔ dplyr     1.1.4     ✔ readr     2.1.5
+✔ forcats   1.0.0     ✔ stringr   1.5.1
+✔ ggplot2   3.5.2     ✔ tibble    3.3.0
+✔ lubridate 1.9.4     ✔ tidyr     1.3.1
+✔ purrr     1.1.0     </code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
-<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(mpg, <span class="fu">aes</span>(<span class="at">x =</span> hwy, <span class="at">y =</span> cyl)) <span class="sc">+</span> <span class="fu">geom_point</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──
+✖ dplyr::filter() masks stats::filter()
+✖ dplyr::lag()    masks stats::lag()
+ℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dplyr)</span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>MicrosoftStockData <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="st">"Microsoft stocks 1 year data.csv"</span>)</span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a><span class="co"># 1. Does high volume correlate with large price movements? ---------------</span></span>
+<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a><span class="co"># Calculate return stock and return a new dataset including the range</span></span>
+<span id="cb6-9"><a href="#cb6-9" aria-hidden="true" tabindex="-1"></a>MicrosoftStockDataWithRange <span class="ot">&lt;-</span> MicrosoftStockData <span class="sc">|&gt;</span></span>
+<span id="cb6-10"><a href="#cb6-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(</span>
+<span id="cb6-11"><a href="#cb6-11" aria-hidden="true" tabindex="-1"></a>    <span class="at">range =</span> high <span class="sc">-</span> low</span>
+<span id="cb6-12"><a href="#cb6-12" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">|&gt;</span></span>
+<span id="cb6-13"><a href="#cb6-13" aria-hidden="true" tabindex="-1"></a>  <span class="fu">arrange</span>(range)</span>
+<span id="cb6-14"><a href="#cb6-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-15"><a href="#cb6-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-16"><a href="#cb6-16" aria-hidden="true" tabindex="-1"></a><span class="co"># Graph of Return Vs. Volume</span></span>
+<span id="cb6-17"><a href="#cb6-17" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> MicrosoftStockDataWithRange, <span class="at">mapping =</span> <span class="fu">aes</span>(<span class="at">x =</span> volume, <span class="at">y =</span> range)) <span class="sc">+</span> </span>
+<span id="cb6-18"><a href="#cb6-18" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="at">position =</span> <span class="st">"jitter"</span>, <span class="at">alpha =</span> <span class="fl">0.5</span>) <span class="sc">+</span> <span class="fu">geom_smooth</span>(<span class="at">color =</span> <span class="st">"yellow"</span>) <span class="sc">+</span> <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">"Range (in $) Vs. Volume (in shares) Graph"</span>, <span class="at">color =</span> <span class="st">"black"</span>) <span class="sc">+</span> <span class="fu">theme</span>(<span class="at">axis.title.x =</span> <span class="fu">element_text</span>(<span class="at">colour =</span> <span class="st">"black"</span>), <span class="at">axis.title.y =</span> <span class="fu">element_text</span>(<span class="at">colour =</span> <span class="st">"black"</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>`geom_smooth()` using method = 'loess' and formula = 'y ~ x'</code></pre>
+</div>
 <div class="cell-output-display">
 <div>
 <figure class="figure">
@@ -196,20 +321,60 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </figure>
 </div>
 </div>
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Returns the average range</span></span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>MicrosoftStockDataWithRange <span class="sc">|&gt;</span></span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarize</span>(</span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a>   <span class="at">averageRange =</span> <span class="fu">mean</span>(range)</span>
+<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>  averageRange
+1     7.616586</code></pre>
 </div>
-<section id="introduction" class="level1">
-<h1>Introduction</h1>
-<section id="methods" class="level2">
-<h2 data-anchor-id="methods">Methods</h2>
-<section id="data-source" class="level3">
-<h3 data-anchor-id="data-source">Data Source</h3>
+</div>
+<p>Based on the graph provided, higher volume can lead to higher ranges, however this is not generally common as seen from the data. This means that as people bought more Microsoft shares, the more volatile those shares became. Additionally, the average range comes out to be $7.60, meaning that the average difference between the highest and lowest stocks from August 2024 to August 2025 is $7.60.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="co"># 2. Is there a relationship between the date and and closing price? --------</span></span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> MicrosoftStockDataWithRange, <span class="at">mapping =</span> <span class="fu">aes</span>(<span class="at">x =</span> date, <span class="at">y =</span> close)) <span class="sc">+</span> </span>
+<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="at">position =</span> <span class="st">"jitter"</span>, <span class="at">color =</span> <span class="st">"red"</span>, <span class="at">alpha =</span> <span class="fl">0.5</span>) <span class="sc">+</span> <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">"Closing Price (in $) Vs. Time (in Days)"</span>, <span class="at">color =</span> <span class="st">"black"</span>) <span class="sc">+</span> <span class="fu">theme</span>(<span class="at">axis.title.x =</span> <span class="fu">element_text</span>(<span class="at">colour =</span> <span class="st">"black"</span>), <span class="at">axis.title.y =</span> <span class="fu">element_text</span>(<span class="at">colour =</span> <span class="st">"black"</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="about_files/figure-html/unnamed-chunk-2-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Return the minimum closing price</span></span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>MicrosoftStockDataWithRange <span class="sc">|&gt;</span> </span>
+<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(close, volume, range, date) <span class="sc">|&gt;</span></span>
+<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">arrange</span>(close) <span class="sc">|&gt;</span></span>
+<span id="cb11-5"><a href="#cb11-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">slice</span>(<span class="dv">1</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>   close   volume range       date
+1 354.56 35868918  23.4 2025-04-08</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Returns the maximum closing price</span></span>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a>MicrosoftStockDataWithRange <span class="sc">|&gt;</span> </span>
+<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(close, volume, range, date) <span class="sc">|&gt;</span></span>
+<span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">arrange</span>(<span class="fu">desc</span>(close)) <span class="sc">|&gt;</span></span>
+<span id="cb13-5"><a href="#cb13-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">slice</span>(<span class="dv">1</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>  close   volume range       date
+1 533.5 51617326 23.55 2025-07-31</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Spring 2025 usually had the least costly closing price, while the end of the summer has the most costly closing price</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Based on the graph provided, Spring 2025 usually has the least costly closing price, while the end of Summer 2025 had the most costly closing price. Additionally, the graph showcases that from August 2024 to April 2025, Microsoft stock has been going on a downward trend with the lowest closing price occuring on April 8th 2025. On the other hand from May 2025 to August 2025, Microsoft stock has been going on an upward trend with the highest closing price occuring on July 31st 2025.</p>
 </section>
-<section id="packages-used" class="level3">
-<h3 data-anchor-id="packages-used">Packages Used</h3>
+</section>
+<section id="discussions" class="level1">
+<h1>Discussions</h1>
+<ul>
+<li>For my first question, my hypothesis was about higher volumes leading to higher ranges was correct. However, my graph was not as linear as I had hoped it be. As seen from the first figure provided, it portrays linearity up until a certain point, where the smooth curve begins to decrease when the share volume becomes high enough. Therefore based on the data observed, I believe in my hypothesis more and am now more aware that higher volumes can, however not commonly, lead to higher price movements.</li>
+<li>For my second question, my hypothesis was about how more time passing would provide a moderate relationship between closing price and days over time. In this case my hypothesis was somewhat fully correct as as my figure had positive and negative rates of change throughout the year of which the dataset was recorded despite not being linear. Therefore based on the data observed, I believe in my hypothesis as the closing price did change throughout the year, which also realistically models how an actual stock market works as well.</li>
+</ul>
 
 
-</section>
-</section>
 </section>
 </main> 
   <hr class="about-sep">

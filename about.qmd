@@ -1,6 +1,6 @@
 ---
-title: "About Me"
-image: profile.jpg
+title: "R Project on Microsoft Stock from 2024-2025"
+image: images/MicrosoftLogo.png
 about:
   template: jolla
   links:
@@ -12,32 +12,208 @@ about:
       href: https://github.com
 ---
 
-The content on this page is from `about.qmd`. Edit that file to change how this page looks.
-
-"About" pages are special quarto template pages, with multiple options: <https://quarto.org/docs/websites/website-about.html>.
-
-Try changing the template type from `jolla` to one of the other options for a different look and feel.
-
--   This is a bullet point
-
--   This is another
-
-    1.  This is a numbered list
-    2.  This is part 2
-
-[Google](https://www.google.com/?safe=active&ssui=on) used to be great.
-
-```{r}
-2+2
-install.packages("ggplot2")
-library(ggplot2)
-ggplot(mpg, aes(x = hwy, y = cyl)) + geom_point()
-```
-
 # Introduction
 
-## Methods
+-   **Important questions to ask**
 
-### Data Source
+    -   Does high volume correlate with large price movements?
 
-### Packages Used
+    -   Is there a relationship between the date and and closing price?
+
+-   **Why is this important?**
+
+    -   Volume indicates stock activity and price movement indicates volatility, which allows us to analyze how "reactive" a stock is to buying/selling pressure
+
+    -   Date and closing time indicates whether Microsoft's stocks are going in an upward or downward trend, which is an indicator of how well the company is financially operating
+
+-   **Predictions**
+
+    -   Higher trading volume will moderately correlate with larger price movements, meaning higher volume leads to more range
+
+    -   I predict that there is some kind of relationship between date and closing price, especially over the 2024–25 period, of which I expect Microsoft's stock to show a subtle to moderate upward trend over time
+
+-   The following data source was used for this project:
+
+    **Microsoft Stocks 1 Year Historical Data**
+
+    <https://www.kaggle.com/datasets/imaadmahmood/microsoft-stocks-1-year-historical-data>
+
+# Approach
+
+### Source:
+
+**Microsoft Stocks 1 Year Historical Data**
+
+<https://www.kaggle.com/datasets/imaadmahmood/microsoft-stocks-1-year-historical-data>
+
+-   The data source provided is historical one year of Microsoft Stock Data from August 2024 to August 2025
+-   data analysis will be conducted through utilizing the R programming language
+
+### Data Collection:
+
+-   The data was collected by monitoring Microsoft Stock variables, and how they fluctuated throughout the year
+
+-   Each entry provided represents a single trading day and includes essential stock market data
+
+    ### Variables
+
+    **-Date:** The trading day in YYYY-MM-DD format.
+
+    \-**Open:** Stock price at market open.
+
+    **-High:** Highest stock price during the day.
+
+    **-Low:** Lowest stock price during the day.
+
+    **-Close:** Stock price at market close.
+
+    **-Volume:** Number of shares traded on that day.
+
+    **-Price Movement (Range):** The difference between the highest stock and lowest stock on a certain day,
+
+    which is used to determine the volitility of the stock market on a certain day.
+
+### Records/Rows
+
+-   The dataset contains 249 **rows**
+
+-   Each row daily stock records with respect to the variables listed earlier
+
+#### Relevant Information
+
+-   Date is represented in days
+
+-   Open, high, low, close, and range are represented in dollars(\$)
+
+-   Volume is represented in shares
+
+### Tools & Packages Used
+
+-   R/Rstudio in [posit.cloud](https://posit.cloud/)
+
+-   GitHub REPO being hosted: <https://github.com/DamianMarciniak2005/rcc_quarto>
+
+-   install.packages("ggplot2") \[R Package\]
+
+-   library(tidyverse) \[R Library\]
+
+-   library(ggplot2) \[R Library\]
+
+-   library(dplyr) \[R Library\]
+
+### Approach cont.
+
+-   I will examine I will examine the correlation between **daily trading volume** and the **range** for Microsoft stock.
+
+-   Compute the **range** for each day:
+
+    **range** = high - low
+
+    Create a **scatter plot** with:
+
+    **volume** on the x-axis
+
+    **range** on the y-axis
+
+-   Use geom_line() to visualize trends over time.
+
+-   Use geom_smooth() to create a smooth line through the data
+
+-   Use labs() to add a title and color
+
+-   Use theme() to add colors to labels
+
+-   Use a summarize() to return the average range
+
+-   I will analyze the relationship between the **date** and **closing price** of Microsoft stock from 2024 to 2025.
+
+-   Create a **scatter plot** with:
+
+    **date** on the x-axis
+
+    **closing price** on the y-axis
+
+-   Use geom_line() to visualize trends over time.
+
+-   Use geom_smooth() to create a smooth line through the data
+
+-   Use labs() to add a title and color
+
+-   Use theme() to add colors to labels
+
+-   Use an R data pipeline to return a row with the maximum closing price
+
+-   Use an R data pipeline to return a row with the minimum closing price
+
+### Predictions cont.
+
+I predict that higher daily trading volume will be linear and positively correlated with larger absolute price movements. Specifically, I expect that days with high trading volume in will yield a high average range greater than most ranges throughout the year. This would mean that that high volume days tend to accompany stronger market reactions or volatility.
+
+I predict that there will be a moderate linear relationship between the date and closing price of Microsoft stock over the 2024–2025 period. Specifically, I expect the closing price to increase dramatically at some time frame in year and decrease in a different time frame in said year (assuming a relatively stable market and no major downturns). This would realistically reflect how the stock market actually operates.
+
+# Results
+
+## Code
+
+```{r}
+install.packages("ggplot2")
+library(tidyverse)
+library(ggplot2)
+library(dplyr)
+
+MicrosoftStockData <- read.csv("Microsoft stocks 1 year data.csv")
+
+# 1. Does high volume correlate with large price movements? ---------------
+
+# Calculate return stock and return a new dataset including the range
+MicrosoftStockDataWithRange <- MicrosoftStockData |>
+  mutate(
+    range = high - low
+  ) |>
+  arrange(range)
+
+
+# Graph of Return Vs. Volume
+ggplot(data = MicrosoftStockDataWithRange, mapping = aes(x = volume, y = range)) + 
+  geom_point(position = "jitter", alpha = 0.5) + geom_smooth(color = "yellow") + labs(title = "Range (in $) Vs. Volume (in shares) Graph", color = "black") + theme(axis.title.x = element_text(colour = "black"), axis.title.y = element_text(colour = "black"))
+
+# Returns the average range
+MicrosoftStockDataWithRange |>
+  summarize(
+   averageRange = mean(range)
+)
+
+
+
+```
+
+Based on the graph provided, higher volume can lead to higher ranges, however this is not generally common as seen from the data. This means that as people bought more Microsoft shares, the more volatile those shares became. Additionally, the average range comes out to be \$7.60, meaning that the average difference between the highest and lowest stocks from August 2024 to August 2025 is \$7.60.
+
+```{r}
+# 2. Is there a relationship between the date and and closing price? --------
+
+ggplot(data = MicrosoftStockDataWithRange, mapping = aes(x = date, y = close)) + 
+  geom_point(position = "jitter", color = "red", alpha = 0.5) + labs(title = "Closing Price (in $) Vs. Time (in Days)", color = "black") + theme(axis.title.x = element_text(colour = "black"), axis.title.y = element_text(colour = "black"))
+
+# Return the minimum closing price
+MicrosoftStockDataWithRange |> 
+  select(close, volume, range, date) |>
+  arrange(close) |>
+  slice(1)
+  
+
+# Returns the maximum closing price
+MicrosoftStockDataWithRange |> 
+  select(close, volume, range, date) |>
+  arrange(desc(close)) |>
+  slice(1)
+
+# Spring 2025 usually had the least costly closing price, while the end of the summer has the most costly closing price
+```
+
+Based on the graph provided, Spring 2025 usually has the least costly closing price, while the end of Summer 2025 had the most costly closing price. Additionally, the graph showcases that from August 2024 to April 2025, Microsoft stock has been going on a downward trend with the lowest closing price occuring on April 8th 2025. On the other hand from May 2025 to August 2025, Microsoft stock has been going on an upward trend with the highest closing price occuring on July 31st 2025.
+
+# Discussions
+
+-   For my first question, my hypothesis was about higher volumes leading to higher ranges was correct. However, my graph was not as linear as I had hoped it be. As seen from the first figure provided, it portrays linearity up until a certain point, where the smooth curve begins to decrease when the share volume becomes high enough. Therefore based on the data observed, I believe in my hypothesis more and am now more aware that higher volumes can, however not commonly, lead to higher price movements.
+-   For my second question, my hypothesis was about how more time passing would provide a moderate relationship between closing price and days over time. In this case my hypothesis was somewhat fully correct as as my figure had positive and negative rates of change throughout the year of which the dataset was recorded despite not being linear. Therefore based on the data observed, I believe in my hypothesis as the closing price did change throughout the year, which also realistically models how an actual stock market works as well.

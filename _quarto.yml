@@ -13,7 +13,7 @@ website:
         href: https://www.linkedin.com/in/damian-marciniak-0928a5214 
 format:
   html:
-    theme: minty
+    theme: dark
     css: styles.css
 
 editor: visual

@@ -1,0 +1,9 @@
+---
+title: "My R Project"
+author: "Damian Marciniak"
+date: "2025-08-06"
+---
+
+This project uses a dataset regarding Microsoft Stock from August 4th 2024 to August 4th 2025. For more information, you may click on my About Me in the top right corner.
+
+![](/images/MicrosoftStocksImg.png)
