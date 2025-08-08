@@ -1,5 +1,19 @@
 [
   {
+    "objectID": "posts/my_first_post/indexPost.html",
+    "href": "posts/my_first_post/indexPost.html",
+    "title": "My R Project",
+    "section": "",
+    "text": "This project uses a dataset regarding Microsoft Stock from August 4th 2024 to August 4th 2025. For more information, you may click on my About Me in the top right corner."
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Damian Marciniak’s R Project on Microsoft Stocks 2024-25",
+    "section": "",
+    "text": "Welcome to my website showing off my R Portfolio!\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nMy R Project\n\n\n\n\n\n\n\n\nAug 6, 2025\n\n\nDamian Marciniak\n\n\n\n\n\nNo matching items"
+  },
+  {
     "objectID": "readme.html",
     "href": "readme.html",
     "title": "Using this quarto course blog template",
@@ -82,20 +96,6 @@
     "title": "Using this quarto course blog template",
     "section": "",
     "text": "See this growing list of quarto resources for much, much more:\nhttps://github.com/mcanouil/awesome-quarto"
-  },
-  {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Damian Marciniak’s R Project on Microsoft Stocks 2024-25",
-    "section": "",
-    "text": "Welcome to my website showing off my R Portfolio!\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nMy R Project\n\n\n\n\n\n\n\n\nAug 6, 2025\n\n\nDamian Marciniak\n\n\n\n\n\nNo matching items"
-  },
-  {
-    "objectID": "posts/my_first_post/indexPost.html",
-    "href": "posts/my_first_post/indexPost.html",
-    "title": "My R Project",
-    "section": "",
-    "text": "This project uses a dataset regarding Microsoft Stock from August 4th 2024 to August 4th 2025. For more information, you may click on my About Me in the top right corner."
   },
   {
     "objectID": "about.html",
