@@ -1,15 +1,6 @@
 ---
 title: "R Project on Microsoft Stock from 2024-2025"
 image: images/MicrosoftLogo.png
-about:
-  template: jolla
-  links:
-    - icon: linkedin
-      text: LinkedIn
-      href: https://linkedin.com
-    - icon: github
-      text: Github
-      href: https://github.com
 ---
 
 # Introduction
@@ -156,7 +147,7 @@ I predict that there will be a moderate linear relationship between the date and
 ## Code
 
 ```{r}
-install.packages("ggplot2")
+#install.packages("ggplot2")
 library(tidyverse)
 library(ggplot2)
 library(dplyr)
